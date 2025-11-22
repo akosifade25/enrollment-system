@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* GLOBAL RESET */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #f5f5f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding-top: 0;
+}
+
+/* CONTAINER */
+.register-container {
+    background: white;
+    width: 100%;
+    max-width: 700px;
+    padding: 40px 40px;
+    border-radius: 16px;
+}
+
+/* TITLE */
+.register-container h2 {
+    text-align: center;
+    font-size: 28px;
+    margin-top: 10px;
+    margin-bottom: 25px;
+    color: #111827;
+}
+
+/* FORM FIELDS */
+.register-container form p {
+    margin-bottom: 15px;
+}
+
+.register-container input,
+.register-btn {
+    display: block;
+    width: 100%;
+    padding: 12px;
+    font-size: 15px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    margin-bottom: 15px;
+}
+
+/* INPUT STYLING */
+.register-container input {
+    border: 1px solid #dce3f1;
+    background: #e9f0ff;
+    color: #111827;
+}
+
+.register-container input:focus {
+    border-color: #2563eb;
+    outline: none;
+}
+
+/* REGISTER BUTTON */
+.register-btn {
+    background: #4e8df5;
+    color: white;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.register-btn:hover {
+    background: #3a74d8;
+}
+
+/* LOGIN LINK */
+.login-text {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #374151;
+}
+
+.login-text a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.login-text a:hover {
+    text-decoration: underline;
+}

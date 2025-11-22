@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit Student</title>
+    <link rel="stylesheet" href="{% static 'css/dashboard.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <a href="{% url 'dashboard' %}" class="brand">Online Enrollment</a>
+            <div class="nav-links">
+                <a href="{% url 'student_account' %}" class="{% if request.resolver_match.url_name == 'student_account' %}active{% endif %}">Student Account</a>
+                <a href="{% url 'address' %}" class="{% if request.resolver_match.url_name == 'address' %}active{% endif %}">Address</a>
+                <a href="{% url 'family' %}" class="{% if request.resolver_match.url_name == 'family' %}active{% endif %}">Family</a>
+                <a href="{% url 'education' %}" class="{% if request.resolver_match.url_name == 'education' %}active{% endif %}">Education</a>
+                <a href="{% url 'subject' %}" class="{% if request.resolver_match.url_name == 'subject' %}active{% endif %}">Subjects</a>
+                <a href="{% url 'add_student' %}" class="{% if request.resolver_match.url_name == 'add_student' %}active{% endif %}">Add Students</a>
+            </div>
+            <a href="{% url 'logout_user' %}" class="logout-btn">Logout</a>
+        </div>
+    </div>
+
+    <h2>Edit Student: {{ student.name }}</h2>
+        <div class="form-container">
+            <form method="post">
+                {% csrf_token %}
+                {{ form.as_p }}
+                <button type="submit"><span style="margin-right:6px;">💾</span>Save Changes</button>
+            </form>
+        </div>
+
+
+</body>
+</html>

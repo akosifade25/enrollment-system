@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% block title %}
+    <title>Home</title>
+    {% endblock %}
+
+</head>
+<body>
+    <nav>
+        <div>
+            <a href="/students">| STUDENTS |</a>
+            <a href="/address">| ADDRESS |</a>
+            <a href="/family ">| FAMILY |</a>
+            <a href="/education ">| EDUCATION |</a>
+            <a href="/subjects">| SUBJECTS |</a>
+        </div>
+    </nav>
+    <div class="content">
+        {% block content %}
+        {% endblock %}
+    </div>
+</body>
+</html>
